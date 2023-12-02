@@ -1,11 +1,22 @@
 *{
     box-sizing: border-box;
 }
+/* body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+} */
 body {
     background-color: black;
     color: white;
     margin: 0;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
 }
 
 h1 {
@@ -50,9 +61,14 @@ h1 {
     width: 70%; /* Adjust the width as needed */
     margin: 0 auto; /* Center-align the form container */
 }
+/* .Name {
+    position:relative;
+    left:200px;
+} */
+
 .Name {
-    transform: translateX(75%);
-    /* Add other styles as needed */
+    align-items: right;
+    margin-left: 400px; 
 }
 
 .check{
@@ -119,38 +135,28 @@ z-index: 999;
 #ok:hover{
     background-color: green;
 }        
-
-
-/* Media Query for smaller screens */
-@media only screen and (max-width: 1000px) {
-    h1 {
-        margin: 20px;
-    }
-
-    #submit-quiz,
-    #back {
-        right: 20px;
-    }
-
-    .Name,
-    .check {
-        right: 20px;
-    }
-    
+@media only screen and (max-width: 768px) {
     .form-container {
-        width: 90%;
-        margin-right:30px;
-    }
-    
-    .mcq-container label {
-        margin-bottom: 7px;
+        width: 90%; /* Adjust width for smaller screens */
     }
 
     #submit-quiz,
-    #back {
-        margin-top: 20px;
-        padding: 5px 20px; 
-        margin-bottom: 8px;
-        margin-left:20px;
+    #back,
+    .check {
+        right: 10px; /* Adjust right position for smaller screens */
+    }
+
+    h1 {
+        margin: 20px; /* Adjust margin for smaller screens */
+    }
+    .newsletter{
+        padding-top: 80px;
+        padding-bottom: 20px;
+        padding-right: 18px;
+    }
+    .Name {
+        /* text-align: right; */
+        margin-left: 315px; 
+        padding-right: 25px;
     }
 }
