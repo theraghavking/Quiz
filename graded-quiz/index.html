@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graded QUIZ</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Graded-QUIZ</h1>
+    <div class="Name">
+        
+        <label for="userID">Enter Your User-ID :</label>
+        <div>
+            <input type="text" id="userID" name="userID" placeholder="User-ID" autofocus>
+            <!-- <div>
+                <select name="dropdown">
+                    <button>Weeks</button>
+                    <div class="dropdown-content">
+                    <option value="week1">week1</option>
+                    <option value="week2">week2</option>
+                    <option value="week3">week3</option>
+                    <option value="week4">week4</option>
+                    <option value="week5">week5</option>
+                    <option value="week6">week6</option>
+                    </div>
+                    
+                </select>
+            </div> -->
+        </div>
+            <div class="dropdown">
+                <button>Weeks 🔽</button>
+                <div class="dropdown-content">
+                    <a href="#">week1</a>
+                    <a href="#">week2</a>
+                    <a href="#">week3</a>
+                    <a href="#">week4</a>
+                    <a href="#">week5</a>
+            </div>
+        </div>
+    </div>
+    <div class="form-container">
+        <form action="post" onsubmit="return validateForm()"> 
+            <div class="mcq-container">
+                <p>1. What is the capital of France?</p>
+                <label>
+                    <input type="radio" name="options" value="paris"> Paris
+                </label>
+                <label>
+                    <input type="radio" name="options" value="london"> London
+                </label>
+                <label>
+                    <input type="radio" name="options" value="berlin"> Berlin
+                </label>
+                <label>
+                    <input type="radio" name="options" value="rome"> Rome
+                </label>
+            </div>
+            <textarea name="comment" rows="4" cols="50">Explain your answer...</textarea>
+            <div class="mcq-container">
+                <p>2. Can populations ever exceed their environment’s long-term carrying capacity?</p>
+                <label>
+                    <input type="radio" name="options" value="paris"> Yes
+                </label>
+                <label>
+                    <input type="radio" name="options" value="london"> No
+                </label>
+                <label>
+                    <input type="radio" name="options" value="berlin"> May be
+                </label>
+                <label>
+                    <input type="radio" name="options" value="rome"> Not possible
+                </label>
+            </div>
+            <textarea name="comment" rows="4" cols="50">Explain your answer...</textarea>
+            <div class="mcq-container">
+                <p>3. What is the capital of India?</p>
+                <label>
+                    <input type="radio" name="options" value="paris"> Paris
+                </label>
+                <label>
+                    <input type="radio" name="options" value="london"> London
+                </label>
+                <label>
+                    <input type="radio" name="options" value="berlin"> Berlin
+                </label>
+                <label>
+                    <input type="radio" name="options" value="rome"> None
+                </label>
+            </div>
+            <textarea name="comment" rows="4" cols="50">Explain your answer...</textarea>
+
+            <div class="newsletter">
+            <div class="check">
+            <input type="checkbox" id="tick" value="yes">
+            <label for="tick">Do you want to submit this quiz ?</label>
+            </div>
+                <input type="button" id="back" value="< Back" onclick="goBack()">
+            <input type="button" id="submit-quiz" value="Submit Quiz" onclick="showPopup()">
+            </div>
+        </form>
+    </div>
+    <!-- Popup and overlay HTML -->
+    <div class="popup" id="popup">
+        <p>Your response has been submitted!</p>
+         <button id="ok" onclick="closePopup()">OK</button>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <div id="error-message" style="color: red;"></div>
+
+</body>
+</html> 
