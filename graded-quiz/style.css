@@ -50,10 +50,11 @@ h1 {
     width: 70%; /* Adjust the width as needed */
     margin: 0 auto; /* Center-align the form container */
 }
-.Name{
-    position:absolute;
-    right:200px;
+.Name {
+    transform: translateX(75%);
+    /* Add other styles as needed */
 }
+
 .check{
     position:absolute;
     right:200px;
